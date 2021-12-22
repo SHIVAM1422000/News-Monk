@@ -18,7 +18,7 @@ export class NewsItem extends Component {
       <div>
 
         <div className="card" style={{width:"18 rem",}}>
-          <img src="https://i.pinimg.com/564x/1a/3e/a7/1a3ea756b8ec93542184c8bb4631205e.jpg" className="card-img-top" alt="..." />
+          <img src={this.props.iurl} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{this.props.title}</h5>
             <p className="card-text">{this.props.des}</p>

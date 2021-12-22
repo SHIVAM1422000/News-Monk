@@ -1,0 +1,54 @@
+article=[
+    {
+    source: {
+    id: "bbc-news",
+    name: "BBC News"
+    },
+    author: "https://www.facebook.com/bbcnews",
+    title: "Indian PM Modi's Twitter hacked with bitcoin tweet",
+    description: "The Indian prime minister's account had a message stating that bitcoin would be distributed to citizens.",
+    url: "https://www.bbc.co.uk/news/world-asia-india-59627124",
+    urlToImage: "https://ichef.bbci.co.uk/news/1024/branded_news/5998/production/_122063922_mediaitem122063921.jpg"
+    
+},
+
+{
+    source: {
+    id: "bbc-news",
+    name: "BBC News"
+    },
+    author: "https://www.facebook.com/bbcnews",
+    title: "Indian PM Modi's Twitter hacked with bitcoin tweet",
+    description: "The Indian prime minister's account had a message stating that bitcoin would be distributed to citizens.",
+    url: "https://www.bbc.co.uk/news/world-asia-india-59627124",
+    urlToImage: "https://ichef.bbci.co.uk/news/1024/branded_news/5998/production/_122063922_mediaitem122063921.jpg"
+    
+},
+
+{
+    source: {
+    id: "bbc-news",
+    name: "BBC News"
+    },
+    author: "https://www.facebook.com/bbcnews",
+    title: "Indian PM Modi's Twitter hacked with bitcoin tweet",
+    description: "The Indian prime minister's account had a message stating that bitcoin would be distributed to citizens.",
+    url: "https://www.bbc.co.uk/news/world-asia-india-59627124",
+    urlToImage: "https://ichef.bbci.co.uk/news/1024/branded_news/5998/production/_122063922_mediaitem122063921.jpg"
+    
+},
+
+{
+    source: {
+    id: "bbc-news",
+    name: "BBC News"
+    },
+    author: "https://www.facebook.com/bbcnews",
+    title: "Indian PM Modi's Twitter hacked with bitcoin tweet",
+    description: "The Indian prime minister's account had a message stating that bitcoin would be distributed to citizens.",
+    url: "https://www.bbc.co.uk/news/world-asia-india-59627124",
+    urlToImage: "https://ichef.bbci.co.uk/news/1024/branded_news/5998/production/_122063922_mediaitem122063921.jpg"
+    
+},
+
+]
