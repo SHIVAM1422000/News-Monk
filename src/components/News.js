@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
 import uuid from "react-uuid";
+import Loading from "./Loading";
 export class News extends Component {
   constructor(props) {
     super(props);
@@ -13,30 +14,28 @@ export class News extends Component {
   }
 
   async componentDidMount() {
+    this.setState({loading:true});
     let api_url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=11a7d98704394439a16e4b1c90a5b18b&page=1&pageSize=20`;
     let data = await fetch(api_url);
     let pd = await data.json();
     let temp = pd.articles;
-    //setting the number of time we could click on net
     let lim = Math.ceil(pd.totalResults / 20);
-    this.setState({ articles: temp, lim: lim });
+    this.setState({ articles: temp, lim: lim ,loading:false});
   }
 
   handleNextClick = async () => {
-    //   console.log("Next Clicked");
-    //   console.log("lim:"+this.state.lim);
+    this.setState({loading:true});
     let api_url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=11a7d98704394439a16e4b1c90a5b18b&page=${
       this.state.page + 1
     }&pageSize=20`;
     let data = await fetch(api_url);
     let pd = await data.json();
     let temp = pd.articles;
-    this.setState({ articles: temp, page: this.state.page + 1 });
+    this.setState({ articles: temp, page: this.state.page + 1,loading:false });
   };
 
   handlePrevClick = async () => {
-    // console.log("Prev Clicked");
-    // console.log("lim:"+this.state.lim);
+    this.setState({loading:true});
     let api_url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=11a7d98704394439a16e4b1c90a5b18b&${
       this.state.page - 1
     }&pageSize=20`;
@@ -45,19 +44,19 @@ export class News extends Component {
     let data = await fetch(api_url);
     let pd = await data.json();
     let temp = pd.articles;
-    this.setState({ articles: temp, page: this.state.page - 1 });
+    this.setState({ articles: temp, page: this.state.page - 1,loading:false });
   };
 
   render() {
     return (
       <div className="container">
-        {/* //rendering news items */}
+           {this.state.loading && <Loading/>}
         <div className="row mx-3 mt-3">
-          {this.state.articles.map((element) => {
+          {!this.state.loading && this.state.articles.map((element) => {
             return (
               <div className="col-md-4 mt-3" key={uuid()}>
                 <NewsItem
-                  title={element.title ? element.title.slice(0, 44) : ""}
+                  title={element.title ? element.title: ""}
                   description={
                     !element.description ? "" : element.description.slice(0, 88)
                   }
