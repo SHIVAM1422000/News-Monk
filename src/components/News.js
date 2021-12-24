@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import NewsItem from "./NewsItem";
 import uuid from "react-uuid";
 import Loading from "./Loading";
+
+
+
+
 export class News extends Component {
   constructor(props) {
     super(props);
@@ -15,17 +19,17 @@ export class News extends Component {
 
   async componentDidMount() {
     this.setState({loading:true});
-    let api_url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=11a7d98704394439a16e4b1c90a5b18b&page=1&pageSize=20`;
+    let api_url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=11a7d98704394439a16e4b1c90a5b18b&page=1&pageSize=20`;
     let data = await fetch(api_url);
     let pd = await data.json();
     let temp = pd.articles;
-    let lim = Math.ceil(pd.totalResults / 20);
+    let lim = Math.ceil(pd.totalResults / this.props.pageSize);
     this.setState({ articles: temp, lim: lim ,loading:false});
   }
 
   handleNextClick = async () => {
     this.setState({loading:true});
-    let api_url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=11a7d98704394439a16e4b1c90a5b18b&page=${
+    let api_url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=11a7d98704394439a16e4b1c90a5b18b&page=${
       this.state.page + 1
     }&pageSize=20`;
     let data = await fetch(api_url);
@@ -36,7 +40,7 @@ export class News extends Component {
 
   handlePrevClick = async () => {
     this.setState({loading:true});
-    let api_url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=11a7d98704394439a16e4b1c90a5b18b&${
+    let api_url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=11a7d98704394439a16e4b1c90a5b18b&${
       this.state.page - 1
     }&pageSize=20`;
     console.log("New Url");
