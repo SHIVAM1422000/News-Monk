@@ -57,6 +57,7 @@ export class News extends Component {
            {this.state.loading && <Loading/>}
         <div className="row mx-3 mt-3">
           {!this.state.loading && this.state.articles.map((element) => {
+            // if(element.urlToImage){
             return (
               <div className="col-md-4 mt-3" key={uuid()}>
                 <NewsItem
@@ -66,9 +67,12 @@ export class News extends Component {
                   }
                   iurl={element.urlToImage}
                   nurl={element.url}
+                  date={element.publishedAt?element.publishedAt:"2022"}
+                  source={element.source.name}
                 />
               </div>
             );
+                // }
           })}
         </div>
 
