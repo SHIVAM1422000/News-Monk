@@ -20,9 +20,10 @@ class App extends Component {
         <Router>
              <div>
            <Navbar/>
-           {/* <News key="ffef" pageSize={20} country="in" category="sports"/> */}
+           {/* <News key="home" pageSize={20} country="in" category="sports"/> */}
            <Switch>
           <Route exact path="/"><News key="home" pageSize={20} country="in" category="general"/></Route>
+          <Route exact path="/index.html"><News key="idx" pageSize={20} country="in" category="general"/></Route>
           <Route exact path="/about"><News key="sports" pageSize={20} country="in" category="sports"/></Route>
           <Route exact path="/business"><News key="business" pageSize={20} country="in" category="business"/></Route>
           <Route exact path="/entertainment"><News key="entertainment" pageSize={20} country="in" category="entertainment"/></Route>
