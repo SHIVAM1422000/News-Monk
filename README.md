@@ -1,3 +1,5 @@
+<h4>Note: The API doesn't allows free hosting that's why github pages is giving some error.</h4>
+
 <h1>Website Preview</h1>
 
 <h3>1. Home Page:<h3>
