@@ -1,6 +1,7 @@
 <h4>******** The API doesn't allows free hosting that's why github pages is giving some error *********</h4>
 
-<h1>Website Preview</h1>
+
+  <h1>Website's Preview</h1>
 
 <h3>1. Home Page:<h3>
 <img src="https://user-images.githubusercontent.com/56889369/149119916-9f2d80db-1fcf-4d29-b31d-4e085ef35748.JPG"> 
@@ -15,12 +16,7 @@
 <img src="https://user-images.githubusercontent.com/56889369/149119965-6fb69c68-29bf-4957-a7cf-1c64c152a59c.JPG"> 
 
 
-<!-- ![1](https://user-images.githubusercontent.com/56889369/149119916-9f2d80db-1fcf-4d29-b31d-4e085ef35748.JPG)
-![2](https://user-images.githubusercontent.com/56889369/149119923-77e60507-43dc-4557-9a86-7c97152cf1ad.JPG)
 
-  ![3](https://user-images.githubusercontent.com/56889369/149119939-2c4aa71d-59e4-4fef-bf96-a425b4d6448f.JPG)
-
-  ![4](https://user-images.githubusercontent.com/56889369/149119965-6fb69c68-29bf-4957-a7cf-1c64c152a59c.JPG) -->
 
   
   
