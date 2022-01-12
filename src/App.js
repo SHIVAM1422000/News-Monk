@@ -23,6 +23,7 @@ class App extends Component {
            {/* <News key="home" pageSize={20} country="in" category="sports"/> */}
            <Switch>
           <Route exact path="/"><News key="home" pageSize={20} country="in" category="general"/></Route>
+          <Route exact path="/#"><News key="home2" pageSize={20} country="in" category="general"/></Route>
           <Route exact path="/index.html"><News key="idx" pageSize={20} country="in" category="general"/></Route>
           <Route exact path="/about"><News key="sports" pageSize={20} country="in" category="sports"/></Route>
           <Route exact path="/business"><News key="business" pageSize={20} country="in" category="business"/></Route>
