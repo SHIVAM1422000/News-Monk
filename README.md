@@ -1,4 +1,4 @@
-<h4>Note: The API doesn't allows free hosting that's why github pages is giving some error.</h4>
+<h4>******** The API doesn't allows free hosting that's why github pages is giving some error *********</h4>
 
 <h1>Website Preview</h1>
 
